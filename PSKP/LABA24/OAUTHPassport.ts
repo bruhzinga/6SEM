@@ -4,8 +4,8 @@ import {Strategy} from 'passport-google-oauth20'
 
 
 passport.use(new Strategy({
-    clientID: "966962127569-m1dg41191s32b3kmjrci08o835rb93ca.apps.googleusercontent.com",
-    clientSecret: "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",
+    clientID: "ID",
+    clientSecret: "SECRET",
     callbackURL: "http://localhost:3000/auth/google/callback"
     },
     function(accessToken, refreshToken, profile, cb) {
