@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form {
+            width: auto;
+            margin: 10px auto;
+            font-size: 40px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .inputs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+        }
+
+        .result {
+            margin-top: 10px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        table {
+
+
+        }
+
+
+    </style>
+    <script defer>
+        function tableMap(result) {
+            result.forEach((item) => {
+                let row = document.createElement('tr'); // create table row
+
+                let teacherCell = document.createElement('td'); // create cells for each value
+                let teacherNameCell = document.createElement('td');
+                let pulpitCell = document.createElement('td');
+
+                teacherCell.innerText = item.TEACHER; // set cell inner text to respective value
+                teacherNameCell.innerText = item.TEACHER_NAME;
+                pulpitCell.innerText = item.PULPIT;
+
+                row.appendChild(teacherCell); // append created cells to row
+                row.appendChild(teacherNameCell);
+                row.appendChild(pulpitCell);
+
+                document.querySelector('table').appendChild(row); // add row to table
+            });
+        }
+
+        async function fetchData(method) {
+            return fetch('http://localhost:3000/api/teachers', {
+                method: `${method}`,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    TEACHER: document.querySelector('input[name="TEACHER"]').value,
+                    TEACHER_NAME: document.querySelector('input[name="TEACHER_NAME"]').value,
+                    PULPIT: document.querySelector('input[name="PULPIT"]').value
+                })
+            });
+
+
+        }
+
+
+        function clearTable() {
+            let table = document.querySelector('table');
+            while (table.rows.length > 1) {
+                table.deleteRow(1);
+            }
+        }
+
+        async function OnGetButton(event) {
+            event.preventDefault();
+            clearTable();
+            let response = await fetch('http://localhost:3000/api/teachers');
+            let result = await response.json();
+            tableMap(result);
+
+        }
+
+        async function OnPostButton(event) {
+            event.preventDefault();
+            clearTable();
+            let response = await fetchData('POST');
+            if (response.status === 200) {
+                let result = await response.json();
+                tableMap(new Array(result));
+            } else {
+                let error = await response.json();
+                alert(error.name);
+
+            }
+
+        }
+
+        async function OnPutButton(event) {
+            event.preventDefault();
+            clearTable();
+            let response = await fetchData('PUT');
+            if (response.status === 200) {
+                let result = await response.json();
+                tableMap(new Array(result));
+            } else {
+                let error = await response.json();
+                alert(error.error);
+
+            }
+
+
+        }
+
+        async function OnDeleteButton(event) {
+            event.preventDefault();
+            clearTable();
+            let TeacherToDelete = document.querySelector('input[name="TEACHER"]').value;
+            let response = await fetch(`http://localhost:3000/api/teachers/${TeacherToDelete}`, {
+                method: 'DELETE',
+            });
+            if (response.status === 200) {
+                let result = await response.json();
+                tableMap(new Array(result));
+            } else {
+                let error = await response.json();
+                alert(error.error);
+
+            }
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+<form>
+    <div class="inputs">
+        <input name="TEACHER" placeholder="TEACHER" type="text">
+        <input name="TEACHER_NAME" placeholder="TEACHER_NAME" type="text">
+        <input name="PULPIT" placeholder="PULPIT" type="text">
+    </div>
+
+    <div class="buttons">
+        <button onclick="OnGetButton(event)">GET</button>
+        <button onclick="OnPostButton(event)">POST</button>
+        <button onclick="OnPutButton(event)">PUT</button>
+        <button onclick="OnDeleteButton(event)">DELETE</button>
+    </div>
+</form>
+<div class="result">
+    <table>
+        <tr>
+            <th>TEACHER</th>
+            <th>TEACHER_NAME</th>
+            <th>PULPIT</th>
+        </tr>
+    </table>
+</div>
+
+
+</body>
+</html>

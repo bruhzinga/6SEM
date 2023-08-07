@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model Authors {
+  Author_ID     Int      @id(map: "PK__Authors__55B9F6DF44987F4A") @default(autoincrement())
+  Name          String   @db.VarChar(50)
+  Date_of_birth DateTime @db.Date
+  Bio           String   @db.VarChar(1000)
+  Nationality   String   @db.VarChar(30)
+  Books         Books[]
+}
+
+model Books {
+  ISBN             String       @id(map: "PK__Books__447D36EBB349DEEF") @db.VarChar(20)
+  Title            String       @db.VarChar(100)
+  Author_id        Int
+  Publication_date DateTime     @db.Date
+  Category_ID      Int
+  Description      String       @db.VarChar(1000)
+  Distributor_ID   Int
+  Authors          Authors      @relation(fields: [Author_id], references: [Author_ID], onUpdate: NoAction, map: "FK__Books__Author_id__2F9A1060")
+  Categories       Categories   @relation(fields: [Category_ID], references: [Category_ID], onUpdate: NoAction, map: "FK__Books__Category___2CBDA3B5")
+  Distributors     Distributors @relation(fields: [Distributor_ID], references: [Distributor_ID], onUpdate: NoAction, map: "FK__Books__Distribut__2EA5EC27")
+  Inventory        Inventory[]
+}
+
+model Categories {
+  Category_ID   Int     @id(map: "PK__Categori__6DB38D4E6C821423") @default(autoincrement())
+  Category_name String  @db.VarChar(30)
+  Books         Books[]
+}
+
+model Distributors {
+  Distributor_ID Int     @id(map: "PK__Distribu__DC36EB0CC7A1A32E") @default(autoincrement())
+  Name           String  @db.VarChar(50)
+  Address        String  @db.VarChar(100)
+  Contact_info   String  @db.VarChar(50)
+  Books          Books[]
+}
+
+model Inventory {
+  Inventory_ID    Int    @id(map: "PK__Inventor__2B65F40B3DA1BA65") @default(autoincrement())
+  ISBN            String @db.VarChar(20)
+  Copies_in_stock Int
+  Location        String @db.VarChar(50)
+  Books           Books  @relation(fields: [ISBN], references: [ISBN], onUpdate: NoAction, map: "FK__Inventory__ISBN__382F5661")
+}

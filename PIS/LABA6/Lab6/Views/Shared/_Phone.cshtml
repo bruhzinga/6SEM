@@ -1,0 +1,12 @@
+﻿@model PhoneDictionary.Phone
+
+<tr>
+    <td>
+        @Html.DisplayFor(item => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(item => item.Number)
+    </td>
+    <td><p><a href="/Dict1/Update/@Model.Id">&#9998; Edit</a></p></td>
+    <td><p><a href="/Dict1/Delete/@Model.Id">&#10006; Delete</a></p></td>
+</tr>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8a60bf3044dd4bf9b5ef8f24b570e813" Name="Diagram1">
+        <EntityTypeShape EntityType="PublishingHouseModel.Author" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishingHouseModel.Book" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishingHouseModel.Category" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishingHouseModel.Categories_Set" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishingHouseModel.Distributor" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishingHouseModel.Inventory" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishingHouseModel.Publisher" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishingHouseModel.Sale" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="PublishingHouseModel.FK__Books__Author_id__6BAEFA67" ManuallyRouted="false" />
+        <AssociationConnector Association="PublishingHouseModel.FK__Books__Category___68D28DBC" ManuallyRouted="false" />
+        <AssociationConnector Association="PublishingHouseModel.FK__Books__Distribut__6ABAD62E" ManuallyRouted="false" />
+        <AssociationConnector Association="PublishingHouseModel.FK__Books__Publisher__69C6B1F5" ManuallyRouted="false" />
+        <AssociationConnector Association="PublishingHouseModel.FK__Inventory__ISBN__7167D3BD" ManuallyRouted="false" />
+        <AssociationConnector Association="PublishingHouseModel.FK__Sales__ISBN__6E8B6712" ManuallyRouted="false" />
+        <AssociationConnector Association="PublishingHouseModel.FK_Categories_ParentCategoryID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

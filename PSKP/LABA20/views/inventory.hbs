@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory</title>
+</head>
+<body>
+<h1>Inventory</h1>
+<ul>
+    {{#each inventories}}
+        <li>
+            <a href="/inventory/{{this.Inventory_ID}}">{{this.ISBN}}</a>
+            <form method="POST" action="/inventory/{{this.Inventory_ID}}?_method=DELETE">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    {{/each}}
+</ul>
+<h2>Add Inventory Item</h2>
+<form method="POST" action="/inventory">
+    <label>
+        ISBN:
+        <input type="text" name="ISBN" required>
+    </label>
+    <label>
+        Copies in stock:
+        <input type="number" name="copies_in_stock" required>
+    </label>
+    <label>
+        Location:
+        <input type="text" name="location" required>
+    </label>
+    <button type="submit">Create</button>
+</form>
+{{#if inventory}}
+    <h2>Edit Inventory Item</h2>
+    <form method="POST" action="/inventory/{{inventory.Inventory_ID}}?_method=POST">
+        <input type="hidden" name="_method" value="PUT">
+        <label>
+            ISBN:
+            <input type="text" name="ISBN" value="{{inventory.ISBN}}" required>
+        </label>
+        <label>
+            Copies in stock:
+            <input type="number" name="copies_in_stock" value="{{inventory.Copies_in_stock}}" required>
+        </label>
+        <label>
+            Location:
+            <input type="text" name="location" value="{{inventory.Location}}" required>
+        </label>
+        <button type="submit">Update</button>
+    </form>
+{{/if}}
+</body>
+</html>

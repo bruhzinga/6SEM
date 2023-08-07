@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<log>
+<record>
+  <date>2023-03-23T14:26:12.421291700Z</date>
+  <nanos>291700</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Catalog PublishingHouse, Schema dbo coalesced to single schema PublishingHouse</message>
+  <key>Convert.COALESCED</key>
+  <catalog>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</catalog>
+  <param>PublishingHouse</param>
+  <param>dbo</param>
+  <param>PublishingHouse</param>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@461bbb37</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:14.763023900Z</date>
+  <nanos>23900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:Books_by_category</message>
+  <param>Books_by_category, MD_VIEWS, 18201Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:15.380006400Z</date>
+  <nanos>6400</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted Books_by_category in 0 seconds</message>
+  <param>Books_by_category, MD_VIEWS, 99451Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:15.407105100Z</date>
+  <nanos>105100</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:Books_by_publisher</message>
+  <param>Books_by_publisher, MD_VIEWS, 18301Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:15.857512Z</date>
+  <nanos>512000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted Books_by_publisher in 0 seconds</message>
+  <param>Books_by_publisher, MD_VIEWS, 99551Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:15.879909Z</date>
+  <nanos>909000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:BooksWithAuthorsAndCategories</message>
+  <param>BooksWithAuthorsAndCategories, MD_VIEWS, 19651Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:16.250271200Z</date>
+  <nanos>271200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted BooksWithAuthorsAndCategories in 0 seconds</message>
+  <param>BooksWithAuthorsAndCategories, MD_VIEWS, 99651Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:16.300695300Z</date>
+  <nanos>695300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:fnGetAverageRevenue</message>
+  <param>fnGetAverageRevenue, MD_STORED_PROGRAMS, 99851Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:16.564710800Z</date>
+  <nanos>710800</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted fnGetAverageRevenue in 0 seconds</message>
+  <param>fnGetAverageRevenue, MD_STORED_PROGRAMS, 99851Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:16.729092400Z</date>
+  <nanos>92400</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:fnGetAverageRevenueByCategory</message>
+  <param>fnGetAverageRevenueByCategory, MD_STORED_PROGRAMS, 100001Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:17.160302500Z</date>
+  <nanos>302500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted fnGetAverageRevenueByCategory in 0 seconds</message>
+  <param>fnGetAverageRevenueByCategory, MD_STORED_PROGRAMS, 100001Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:17.308183700Z</date>
+  <nanos>183700</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:fnGetBooksByCategory</message>
+  <param>fnGetBooksByCategory, MD_STORED_PROGRAMS, 100151Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:17.750262500Z</date>
+  <nanos>262500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted fnGetBooksByCategory in 0 seconds</message>
+  <param>fnGetBooksByCategory, MD_STORED_PROGRAMS, 100151Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:17.894579600Z</date>
+  <nanos>579600</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:AddSubordinateCategory</message>
+  <param>AddSubordinateCategory, MD_STORED_PROGRAMS, 99751Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:18.081360100Z</date>
+  <nanos>360100</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted AddSubordinateCategory in 0 seconds</message>
+  <param>AddSubordinateCategory, MD_STORED_PROGRAMS, 99751Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:18.205361400Z</date>
+  <nanos>361400</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:GetCategoryDescendants</message>
+  <param>GetCategoryDescendants, MD_STORED_PROGRAMS, 100301Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:18.580610500Z</date>
+  <nanos>610500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted GetCategoryDescendants in 0 seconds</message>
+  <param>GetCategoryDescendants, MD_STORED_PROGRAMS, 100301Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:18.713432400Z</date>
+  <nanos>432400</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:GetSubordinateCategories</message>
+  <param>GetSubordinateCategories, MD_STORED_PROGRAMS, 100401Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:19.181673500Z</date>
+  <nanos>673500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted GetSubordinateCategories in 0 seconds</message>
+  <param>GetSubordinateCategories, MD_STORED_PROGRAMS, 100401Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:19.297351200Z</date>
+  <nanos>351200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:MoveSubordinateBranch</message>
+  <param>MoveSubordinateBranch, MD_STORED_PROGRAMS, 100501Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:19.541268500Z</date>
+  <nanos>268500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted MoveSubordinateBranch in 0 seconds</message>
+  <param>MoveSubordinateBranch, MD_STORED_PROGRAMS, 100501Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:19.664836900Z</date>
+  <nanos>836900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:spGetBooksByCategory</message>
+  <param>spGetBooksByCategory, MD_STORED_PROGRAMS, 100601Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:19.992062800Z</date>
+  <nanos>62800</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted spGetBooksByCategory in 0 seconds</message>
+  <param>spGetBooksByCategory, MD_STORED_PROGRAMS, 100601Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:20.102817300Z</date>
+  <nanos>817300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:spUpdateInventory</message>
+  <param>spUpdateInventory, MD_STORED_PROGRAMS, 100701Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:20.278259700Z</date>
+  <nanos>259700</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted spUpdateInventory in 0 seconds</message>
+  <param>spUpdateInventory, MD_STORED_PROGRAMS, 100701Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:20.392943100Z</date>
+  <nanos>943100</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:spUpdateOrders</message>
+  <param>spUpdateOrders, MD_STORED_PROGRAMS, 100801Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:20.547566Z</date>
+  <nanos>566000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted spUpdateOrders in 0 seconds</message>
+  <param>spUpdateOrders, MD_STORED_PROGRAMS, 100801Convert</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:20.768680Z</date>
+  <nanos>680000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask</class>
+  <message>Convert completed in 6 seconds</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@461bbb37</param>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:24.333970300Z</date>
+  <nanos>970300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>SEVERE</level>
+  <class>oracle.dbtools.migration.workbench.core.logging.MigrationLogUtil</class>
+  <message>Generation phase
+ORA-00942: таблица или представление пользователя не существует
+</message>
+  <param>oracle.dbtools.metadata.persistence.PersistableObject.doUpdate(PersistableObject.java:364)</param>
+  <param>oracle.dbtools.metadata.persistence.PersistableObject.save(PersistableObject.java:186)</param>
+  <param>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask.doGenerate(FullMigrateTask.java:1303)</param>
+  <param>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask.doMaskBasedActions(FullMigrateTask.java:437)</param>
+  <param>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask.doWork(FullMigrateTask.java:321)</param>
+  <param>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask.doWork(FullMigrateTask.java:154)</param>
+  <param>oracle.dbtools.raptor.backgroundTask.RaptorTask.call(RaptorTask.java:199)</param>
+  <param>java.base/java.util.concurrent.FutureTask.run(Unknown Source)</param>
+  <param>oracle.dbtools.raptor.backgroundTask.RaptorTaskManager$RaptorFutureTask.run(RaptorTaskManager.java:702)</param>
+  <param>java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)</param>
+  <param>java.base/java.util.concurrent.FutureTask.run(Unknown Source)</param>
+  <param>java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)</param>
+  <param>java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)</param>
+  <param>java.base/java.lang.Thread.run(Unknown Source)</param>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@391c7f17</param>
+  <exception>
+    <message>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask$FullMigrateTaskException: Generation phase
+ORA-00942: таблица или представление пользователя не существует
+</message>
+    <frame>
+      <class>oracle.dbtools.metadata.persistence.PersistableObject</class>
+      <line>364</line>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.metadata.persistence.PersistableObject</class>
+      <line>186</line>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask</class>
+      <line>1303</line>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask</class>
+      <line>437</line>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask</class>
+      <line>321</line>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask</class>
+      <line>154</line>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.raptor.backgroundTask.RaptorTask</class>
+      <line>199</line>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.FutureTask</class>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.raptor.backgroundTask.RaptorTaskManager$RaptorFutureTask</class>
+      <line>702</line>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.Executors$RunnableAdapter</class>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.FutureTask</class>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.ThreadPoolExecutor</class>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.ThreadPoolExecutor$Worker</class>
+    </frame>
+    <frame>
+      <class>java.lang.Thread</class>
+    </frame>
+  </exception>
+
+</record>
+<record>
+  <date>2023-03-23T14:26:24.340362600Z</date>
+  <nanos>362600</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask</class>
+  <message>Generated script run has failures: FAILED : Database Migration : FAILED</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@430e5d9</param>
+
+</record>
+</log>

@@ -1,0 +1,27 @@
+﻿@model MVC1.Models.Contact
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add</h2>
+
+<form method="post" class="form-horizontal">
+
+    @Html.ValidationSummary(true)
+
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name, "")
+
+    @Html.LabelFor(model => model.Phone)
+    @Html.EditorFor(model => model.Phone)
+    @Html.ValidationMessageFor(model => model.Phone, "")
+
+    <input type="submit" value="Add"/>
+
+</form>
+
+
+@Html.ActionLink("Back to List", "Index")

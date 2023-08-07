@@ -1,0 +1,36 @@
+.App
+{
+    text-align: center;
+
+}
+
+.SumForm
+{
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+
+}
+
+.SumForm input
+{
+
+}
+
+.SumForm button
+{
+    width: 100%;
+}
+
+textarea
+{
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+}
+
+.result
+{
+    font-size: 60px;
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+<div class="contacts">
+	{{#each contacts}}
+		{{>contact}}
+	{{/each}}
+</div>
+<br>
+<form action="/update" method="post">
+	<input type="hidden" id="olName" name="OldName" value="{{name}}">
+	<input type="hidden" id="oldPhone" name="OldPhone" value="{{telephone}}">
+	<input type="text" id="NewName" name="newName" value="{{name}}">
+	<input type="text" id="NewPhone" name="newTelephone" value="{{telephone}}">
+	<input type="submit" class="update-btn" value="Изменить">
+</form>
+<form action="/delete" method="post">
+    <input type="hidden" id="Name" name="Name" value="{{name}}">
+    <input type="hidden" id="Phone" name="Phone" value="{{telephone}}">
+	<input type="submit" id="delete" class="delete-btn" value="Удалить">
+</form>
+<script>
+	document.getElementById('input').oninput = () => {
+		document.getElementById('delete').disabled = true;
+	}
+</script>

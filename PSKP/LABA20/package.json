@@ -1,0 +1,14 @@
+{
+  "name": "laba20",
+  "version": "1.0.0",
+  "description": "",
+  "main": "20-01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon --watch './**/*.{ts,graphql}' --exec  node --experimental-specifier-resolution=node --loader ts-node/esm 20-01.ts",
+    "dev": "tsc-watch --onSuccess \"npm run watch\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

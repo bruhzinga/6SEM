@@ -1,0 +1,30 @@
+﻿@model PhoneDictionary.Phone
+
+@{
+    ViewBag.Title = "Update";
+}
+
+@using Lab6.Helpers
+
+@section Header
+{
+    <header>
+        <h2>Update</h2>
+    </header>
+}
+
+
+@Html.CreateUpdatePhoneForm(Model)
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Footer
+{
+    <footer>
+        <h2>
+            <Footer></Footer>
+        </h2>
+    </footer>
+}

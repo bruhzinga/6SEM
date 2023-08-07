@@ -1,0 +1,15 @@
+{
+  "name": "laba22-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "22-01.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon --watch './**/*.{ts,graphql}' --exec  node --experimental-specifier-resolution=node --loader ts-node/esm 22-01.ts",
+    "dev": "tsc-watch --onSuccess \"npm run watch\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

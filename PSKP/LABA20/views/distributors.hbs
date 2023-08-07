@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Distributors</title>
+</head>
+<body>
+<h1>Distributors</h1>
+<ul>
+    {{#each distributors}}
+        <li>
+            <a href="/distributors/{{this.Distributor_ID}}">{{this.Name}}</a>
+            <form method="POST" action="/distributors/{{this.Distributor_ID}}?_method=DELETE">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    {{/each}}
+</ul>
+<h2>Add Distributor</h2>
+<form method="POST" action="/distributors">
+    <label>
+        Name:
+        <input type="text" name="name" required>
+    </label>
+    <label>
+        Address:
+        <input type="text" name="address" required>
+    </label>
+    <label>
+        Contact Info:
+        <input type="text" name="contactInfo" required>
+    </label>
+    <button type="submit">Create</button>
+</form>
+{{#if distributor}}
+    <h2>Edit Distributor</h2>
+    <form method="POST" action="/distributors/{{distributor.Distributor_ID}}?_method=POST">
+        <input type="hidden" name="_method" value="PUT">
+        <label>
+            Name:
+            <input type="text" name="name" value="{{distributor.Name}}" required>
+        </label>
+        <label>
+            Address:
+            <input type="text" name="address" value="{{distributor.Address}}" required>
+        </label>
+        <label>
+            Contact Info:
+            <input type="text" name="contactInfo" value="{{distributor.Contact_info}}" required>
+        </label>
+        <button type="submit">Update</button>
+    </form>
+{{/if}}
+</body>
+</html>

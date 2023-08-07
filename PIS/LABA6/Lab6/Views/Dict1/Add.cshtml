@@ -1,0 +1,29 @@
+﻿@model PhoneDictionary.Phone
+
+@{
+    ViewBag.Title = "Add";
+}
+
+@using Lab6.Helpers
+
+@section Header
+{
+    <header>
+        <h2>Add</h2>
+    </header>
+}
+
+@Html.CreateAddPhoneForm()
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Footer
+{
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+}
+
+

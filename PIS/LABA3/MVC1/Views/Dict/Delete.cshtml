@@ -1,0 +1,22 @@
+﻿@model MVC1.Models.Contact
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+
+@Html.DisplayNameFor(model => model.Name)
+@Html.DisplayFor(model => model.Name)
+@Html.DisplayNameFor(model => model.Phone)
+@Html.DisplayFor(model => model.Phone)
+
+
+<form method="post">
+    <div>
+        <input type="submit" value="Delete"/>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</form>

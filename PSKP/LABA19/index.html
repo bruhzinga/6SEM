@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of Faculties</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>List of Faculties</h1>
+<table>
+    <thead>
+    <tr>
+        <th>PULPIT</th>
+        <th>FACULTY</th>
+        <th>PULPIT_NAME</th>
+        <th>_count</th>
+    </tr>
+    </thead>
+    <tbody id="facultyList"></tbody>
+</table>
+<button onclick="fetchAndDisplayFaculties(++currentPage)">NEXT</button>
+<div id="displayPage"></div>
+<button onclick="fetchAndDisplayFaculties(currentPage <= 1 ? 1 : --currentPage)">PREV</button>
+
+<script>
+    const itemsPerPage = 10; // Number of items to display per page
+    let currentPage = 1; // Current page number
+
+    // Function to fetch faculties for a given page number and display them
+    function fetchAndDisplayFaculties(page) {
+        fetch(`/api/facultiesPage?page=${page}`)
+            .then(response => response.json())
+            .then(data => {
+                // Clear previous faculty list
+                const facultyListTable = document.getElementById("facultyList");
+                facultyListTable.innerHTML = "";
+
+                // Loop through faculties for current page and display them in table rows
+                for (let i = 0; i < data.length; i++) {
+                    const pulpit = data[i];
+
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                  <td>${pulpit.PULPIT}</td>
+                  <td>${pulpit.FACULTY}</td>
+                  <td>${pulpit.PULPIT_NAME}</td>
+                  <td>${pulpit._count.TEACHER_TEACHER_PULPITToPULPIT}</td>
+                `;
+                    facultyListTable.appendChild(row);
+
+                }
+
+                // Update pagination buttons
+            })
+            .catch(error => {
+                alert("Out of bounds")
+            });
+        let displayPage = document.getElementById("displayPage");
+        displayPage.innerHTML = page;
+    }
+
+    fetchAndDisplayFaculties(currentPage);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!-- views/books.hbs -->
+
+<h1>Books</h1>
+
+<!-- List all books -->
+{{#if books}}
+    <table>
+        <thead>
+        <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publication Date</th>
+            <th>Category</th>
+            <th>Distributor</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each books}}
+            <tr>
+                <td>{{ISBN}}</td>
+                <td>{{Title}}</td>
+                <td>{{Authors.Name}}</td>
+                <td>{{Publication_date}}</td>
+                <td>{{Categories.Name}}</td>
+                <td>{{Distributors.Name}}</td>
+                <td>{{Description}}</td>
+                <td>
+                    <a href="/books/{{ISBN}}">Edit</a>
+                    <form method="POST" action="/books/{{ISBN}}?_method=DELETE">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <p>No books found.</p>
+{{/if}}
+
+<!-- Form to add/edit book -->
+<form method="POST">
+    <input type="hidden" name="_method" value="{{method}}">
+    <label for="isbn">ISBN:</label>
+    <input type="text" name="ISBN" value="{{book.ISBN}}">
+    <br>
+    <label for="title">Title:</label>
+    <input type="text" name="title" value="{{book.Title}}">
+    <br>
+    <label for="author">Author:</label>
+   <input type="number" name="Author_id" value="{{book.Author_id}}">
+    <br>
+    <label for="publication_date">Publication Date:</label>
+    <input type="text" name="Publication_date" value="{{book.Publication_date}}">
+    <br>
+    <label for="category">Category:</label>
+    <input type="number" name="Category_ID" value="{{book.Category_ID}}">
+    <br>
+    <label for="distributor">Distributor:</label>
+    <input type="number" name="Distributor_ID" value="{{book.Distributor_ID}}">
+    <br>
+    <label for="description">Description:</label>
+    <textarea name="Description">{{book.Description}}</textarea>
+    <br>
+    <button type="submit">Submit</button>
+</form>

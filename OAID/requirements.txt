@@ -1,0 +1,9 @@
+pandas
+matplotlib
+numpy
+scipy
+IPython
+sklearn
+mglearn
+scikit-learn==1.1.3
+joblib==1.1.0

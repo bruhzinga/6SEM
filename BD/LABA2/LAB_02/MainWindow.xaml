@@ -1,0 +1,153 @@
+﻿<Window x:Class="LAB_02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LAB_02"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="822">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TabControl Grid.ColumnSpan="2" Margin="0,0,-0.4,0">
+
+            <TabItem Header="Authors">
+                <Grid Height="400">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="129*"/>
+                        <ColumnDefinition Width="646*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="labelName" Content="Name" Margin="3,10,24,338" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxIdName" HorizontalAlignment="Left" Height="31" Margin="77,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                    <Label x:Name="labelDescrProd" Content="Date of birth" Margin="3,55,32,296" Grid.Column="1"/>
+                    <DatePicker x:Name="DateOfBirthId" HorizontalAlignment="Left" Height="31" Margin="77,55,0,0"  Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                    <Label x:Name="labelPriceProd" Content="BIO" Margin="3,103,38,253" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxBIOID" HorizontalAlignment="Left" Height="31" Margin="77,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                    <Label x:Name="Nationality" Content="Nationality" Margin="11,153,50,203" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="textBoxNationality" HorizontalAlignment="Left" Height="31" Margin="77,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+                    <Label x:Name="ID" Content="ID" Margin="10,189,30,167" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxID" HorizontalAlignment="Left" Height="31" Margin="77,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                    <DataGrid x:Name="AuthorsGrid" HorizontalAlignment="Left" Height="173" Margin="-4,227,0,0" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5">
+
+                    </DataGrid>
+
+                    <Button x:Name="addAuthor" Content="Add" Margin="186,10,324,338" Click="addAuthor_Click" Grid.Column="2"></Button>
+                    <Button x:Name="dropAuthor" Content="Delete" Margin="186,59,324,286" Click="dropAuthor_Click" Grid.Column="2"/>
+                    <Button x:Name="changeAuthor" Content="Update" Margin="186,111,324,234" Click="changeAuthor_Click" Grid.Column="2"/>
+                    <Button x:Name="allAuthors" Content="All authors" Margin="186,163,324,188" Click="allAuthors_Click" Grid.Column="2" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Sales">
+                <Grid Height="400">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="129*"/>
+                        <ColumnDefinition Width="646*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label  Content="ISBN" Margin="3,10,24,338" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxSaleISBN" HorizontalAlignment="Left" Height="31" Margin="77,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                    <Label  Content="Date of sale" Margin="3,55,32,296" Grid.Column="1"/>
+                    <DatePicker x:Name="DateOfSaleId" HorizontalAlignment="Left" Height="31" Margin="77,55,0,0" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                    <Label Content="CopiesSold" Margin="3,103,38,253" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxSalesCopiesSold" HorizontalAlignment="Left" Height="31" Margin="77,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                    <Label  Content="ID" Margin="10,189,30,167" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxSaleID" HorizontalAlignment="Left" Height="31" Margin="77,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                    <Label Content="Revenue" Margin="11,153,50,203" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="textBoxRevenue" HorizontalAlignment="Left" Height="31" Margin="77,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                    <DataGrid x:Name="SalesGrid" HorizontalAlignment="Left" Height="173" Margin="-4,227,0,0" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5">
+
+                    </DataGrid>
+
+                    <Button x:Name="addSale" Content="Add" Margin="186,10,324,338" Click="addSale_Click" Grid.Column="2"></Button>
+                    <Button x:Name="dropSale" Content="Delete" Margin="186,59,324,286" Click="dropSale_Click" Grid.Column="2"/>
+                    <Button x:Name="changeSale" Content="Update" Margin="186,111,324,234" Click="changeSale_Click" Grid.Column="2"/>
+                    <Button x:Name="allSales" Content="All sales" Margin="186,163,324,188" Click="allSales_Click" Grid.Column="2" />
+                    <DatePicker x:Name="FirstDate" Grid.Column="2" HorizontalAlignment="Left" Margin="385,86,0,0" VerticalAlignment="Top"/>
+                    <DatePicker x:Name="SecondDate" Grid.Column="2" HorizontalAlignment="Left" Margin="385,123,0,0" VerticalAlignment="Top"/>
+                    <Button Grid.Column="2" Content="FIND SALES BETWEEN" HorizontalAlignment="Left" Margin="503,86,0,0" VerticalAlignment="Top" Height="65" Width="112" Click="Button_Click"/>
+                </Grid>
+
+
+            </TabItem>
+            <TabItem Header="Inventory">
+                <Grid Height="400">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="129*"/>
+                        <ColumnDefinition Width="646*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="labelISBN" Content="ISBN" Margin="3,10,24,338" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxISBN" HorizontalAlignment="Left" Height="31" Margin="77,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                    <Label x:Name="labelCopiesInStock" Content="Copies in stock" Margin="3,55,32,296" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxCopiesInStock" HorizontalAlignment="Left" Height="31" Margin="77,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                    <Label x:Name="labelLocation" Content="Location" Margin="3,103,38,253" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxLocation" HorizontalAlignment="Left" Height="31" Margin="77,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                    <Label x:Name="labelID" Content="ID" Margin="15,144,24,212" Grid.Column="1"/>
+                    <TextBox x:Name="inventoryId" HorizontalAlignment="Left" Height="31" Margin="77,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                    <DataGrid x:Name="InventoryGrid" HorizontalAlignment="Left" Height="173" Margin="-4,227,0,0" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5">
+
+                    </DataGrid>
+
+                    <Button x:Name="addInventory" Content="Add" Margin="186,10,324,338" Click="addInventory_Click" Grid.Column="2"></Button>
+                    <Button x:Name="dropInventory" Content="Delete" Margin="186,59,324,286" Click="dropInventory_Click" Grid.Column="2"/>
+                    <Button x:Name="changeInventory" Content="Update" Margin="186,111,324,234" Click="changeInventory_Click" Grid.Column="2"/>
+                    <Button x:Name="allInventory" Content="All inventory" Margin="186,163,324,188" Click="allInventory_Click" Grid.Column="2" />
+                </Grid>
+
+
+            </TabItem>
+            <TabItem Header="Distributors">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="127*"/>
+                        <ColumnDefinition Width="690*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Margin="246,28,297,359" Click="Button_Click_1" Grid.Column="1">STIntersection</Button>
+
+                    <DataGrid x:Name="SampleGrid" HorizontalAlignment="Left" Height="173" Margin="-4,227,0,0" VerticalAlignment="Top" Width="412" Grid.ColumnSpan="2" >
+
+                    </DataGrid>
+                    <Button Margin="432,28,106,355" Content="STUnion" Grid.Column="1" Click="Button_Click_2" />
+                    <Button Margin="246,115,296,271" Content="STDifference" Grid.Column="1" Click="Button_Click_3"/>
+                    <TextBox HorizontalAlignment="Left" Margin="48,30,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="280" Height="42" Grid.ColumnSpan="2"
+                             x:Name="X"/>
+                    <TextBox HorizontalAlignment="Left" Margin="48,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Height="42" Grid.ColumnSpan="2"
+                             x:Name="Y"/>
+                    <Button Margin="432,114,106,271" Content="STDistance" Grid.Column="1" Click="Button_Click_4" />
+                    <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="293,227,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="173" Width="355"
+                               x:Name="RESULT"/>
+                    <Button Content="GET" HorizontalAlignment="Left" Margin="10,405,0,0" VerticalAlignment="Top" Height="41" Width="78" Click="Button_Click_5"/>
+                </Grid>
+
+
+
+
+
+
+            </TabItem>
+
+
+
+
+
+        </TabControl>
+
+
+    </Grid>
+</Window>

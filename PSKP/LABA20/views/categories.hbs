@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories</title>
+</head>
+<body>
+<h1>Categories</h1>
+<ul>
+    {{#each categories}}
+        <li>
+            <a href="/categories/{{this.Category_ID}}">{{this.Category_name}}</a>
+            <form method="POST" action="/categories/{{this.Category_ID}}?_method=DELETE">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    {{/each}}
+</ul>
+<h2>Add Category</h2>
+<form method="POST" action="/categories">
+    <label>
+        Name:
+        <input type="text" name="name" required>
+    </label>
+    <button type="submit">Create</button>
+</form>
+{{#if category}}
+    <h2>Edit Category</h2>
+    <form method="POST" action="/categories/{{category.Category_ID}}?_method=POST">
+        <input type="hidden" name="_method" value="PUT">
+        <label>
+            Name:
+            <input type="text" name="name" value="{{category.Category_name}}" required>
+        </label>
+        <button type="submit">Update</button>
+    </form>
+{{/if}}
+</body>
+</html>

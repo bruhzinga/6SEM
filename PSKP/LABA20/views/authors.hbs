@@ -1,0 +1,45 @@
+<!-- views/index.hbs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Express + Prisma Example</title>
+</head>
+<body>
+<h1>Authors</h1>
+<ul>
+    {{#each authors}}
+        <li><a href="/authors/{{Author_ID}}">{{Name}}</a></li>
+    {{/each}}
+</ul>
+
+<h2>Create a new author</h2>
+<form method="post" action="/authors">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="dateOfBirth" placeholder="Date of birth">
+    <input type="text" name="bio" placeholder="Bio">
+    <input type="text" name="nationality" placeholder="Nationality">
+    <button>Create</button>
+</form>
+
+{{#if author}}
+    <h2>{{author.Name}}</h2>
+    <p>Date of birth: {{author.Date_of_birth}}</p>
+    <p>Bio: {{author.Bio}}</p>
+    <p>Nationality: {{author.Nationality}}</p>
+
+    <h2>Edit author</h2>
+    <form method="post" action="/authors/{{author.Author_ID}}">
+        <input type="text" name="name" placeholder="Name" value="{{author.Name}}">
+        <input type="text" name="dateOfBirth" placeholder="Date of birth" value="{{author.Date_of_birth}}">
+        <input type="text" name="bio" placeholder="Bio" value="{{author.Bio}}">
+        <input type="text" name="nationality" placeholder="Nationality" value="{{author.Nationality}}">
+        <button>Save</button>
+    </form>
+
+    <h2>Delete author</h2>
+    <form method="post" action="/authors/{{author.Author_ID}}?_method=DELETE">
+        <button>Delete</button>
+    </form>
+{{/if}}
+</body>
+</html>

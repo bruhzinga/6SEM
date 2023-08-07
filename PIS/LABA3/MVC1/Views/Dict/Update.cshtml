@@ -1,0 +1,26 @@
+﻿@model MVC1.Models.Contact
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+<form method="post">
+    @Html.ValidationSummary(true)
+
+    @Html.HiddenFor(model => model.Id)
+
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name, "")
+
+    @Html.LabelFor(model => model.Phone)
+    @Html.EditorFor(model => model.Phone)
+    @Html.ValidationMessageFor(model => model.Phone, "")
+
+    <input type="submit" value="Update"/>
+
+</form>
+
+@Html.ActionLink("Back to List", "Index")

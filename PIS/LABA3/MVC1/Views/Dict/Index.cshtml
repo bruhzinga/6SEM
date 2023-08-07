@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MVC1.Models.Contact>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<table id="table">
+    <tr class="thead">
+        <td>Name</td>
+        <td>Phone</td>
+        <td colspan="2">Action</td>
+    </tr>
+    @foreach (var item in Model.OrderBy(x=>x.Name))
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Phone</td>
+            <td>
+                <p>
+                    <a href="Dict/Update/@item.Id"> Edit</a>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a href="Dict/Delete/@item.Id"> Delete</a>
+                </p>
+            </td>
+        </tr>
+    }
+</table>
+    <a href="Dict/Add">Add</a>
